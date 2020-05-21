@@ -37,11 +37,11 @@ FactoryBot.define do
     end
 
     trait :super_admin do
-      after(:build) { |user| user.add_role(:super_admin) }
+      after(:create) { |user| user.add_role(:super_admin) }
     end
 
     trait :admin do
-      after(:build) { |user| user.add_role(:admin) }
+      after(:create) { |user| user.add_role(:admin) }
     end
 
     trait :single_resource_admin do
